@@ -1,7 +1,10 @@
 #!/usr/bin/bash
 # Delete any exercise output files from previous runs
 rm -f *.exercise.out
+
 # Initial variable values at start
+inputfile="$PWD/blastoutput2.out"
+
 goodlines=$(grep -v "#" ${inputfile} | wc -l | cut -d ' ' -f1)
 unset IFS
 unset dataline
